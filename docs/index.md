@@ -27,12 +27,12 @@ See the relationship between the connector files (in blue) and the Tableau **Con
 You can user the "Other Databases (ODBC)" and "Other Databases (JDBC)" connectors to connect to your database. The Tableau Connector SDK is similar, but offers the following advantages:
 - Better live query support. You can customize the dialect used to generate SQL queries so they are compatible and optimized for your database. The Other Database connectors rely on higher-level standard SQL that may not always be appropriate.
 - Simpler connection experience. An SDK connector can provide its own customized dialect and you do not need to rely on using DSNs. Users will not need to enter in obscure JDBC URL strings or create a DSN or configure odbc.ini files. Your connector can provide a simple customized connection dialog.
-- Runs in Tableau Desktop and Tableau Server. No configuration is required after you install the connector.
+- Runs in Tableau Desktop, Tableau Server, and Tableu Prep. No configuration is required after you install the connector.
 
 If your data source does not fit the relational ODBC/JDBC model, then it may be worth looking into [Web data connectors](https://tableau.github.io/webdataconnector).
 
 # What is a TACO file?
-A TACO file (.taco)  is a packaged Tableau connector file that can be placed in your "My Tableau Repository/Connectors" folder. From there, Tableau automatically loads all connectors it finds.
+A TACO file (.taco)  is a packaged Tableau connector file that can be placed in your "My Tableau Repository/Connectors" folder (or, for Tableau Prep, "My Tableau Prep Repository/Connectors" folder). From there, Tableau automatically loads all connectors it finds.
 
 For more information about packaging your connector into a TACO, see [Package and sign your connector for distribution]({{ site.baseurl }}/docs/package-sign)
 
@@ -59,7 +59,7 @@ These are the general steps you will follow to create a fully functional connect
 
 To develop connectors, be sure you have the following installed on your computer:
 - Windows or Mac operating system
-- Tableau Desktop or Tableau Server 2019.2 or higher
+- Tableau Desktop, Tableau Server, or Tableau Prep 2019.2 or higher
 - __Note:__ Tableau 2019.4 is required to run TACO files
 - Python 3.7 or higher
 - An ODBC or JDBC data source and driver that meets the requirements listed [here]({{ site.baseurl }}/docs/drivers)
